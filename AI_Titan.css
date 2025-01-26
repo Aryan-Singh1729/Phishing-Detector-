@@ -1,0 +1,310 @@
+* {
+    box-sizing: border-box; /* Ensures padding and border are included in dimensions */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    padding-bottom: 50px;
+    overflow-x: hidden;
+}
+
+.navbar {
+    width: 100%;
+    background-color: white;
+    color: #000;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.img{
+    width: 8rem;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.navbar .menu {
+    margin-left: 2vw;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar .menu a {
+    color: rgb(78, 76, 76);
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+  
+}
+
+.navbar .hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Dropdown menu (hidden by default) */
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    gap: 50px;
+    background-color: #007bff;
+    padding: 10px;
+    position: absolute;
+    top: 50px; /* Adjust based on navbar height */
+    left: 20px;
+    border-radius: 5px;
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.dropdown-menu a:hover {
+    color: #77a0e2;
+}
+
+@media only screen and (max-width: 650px) {
+    .navbar {
+      justify-content: center;
+    }
+    .navbar .menu{
+        display: none;
+    }
+    .navbar .hamburger {
+        display: block; /* Show hamburger menu */
+    }
+}
+  
+
+.navbar .menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -22px;
+    width: 0;
+    height: 2px;
+    background-color: rgb(97, 97, 234);
+    transition: width 0.5s ease-in-out;
+  }
+
+.navbar .menu a:hover {
+  color: rgb(97, 97, 234); 
+}
+
+.navbar .menu a:hover::after {
+    width: 100%;
+    height: 2px;
+}
+  
+
+.container {
+    width: 90%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.container h1 {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    color: #0f4291;
+    font-weight: bold;
+}
+
+.container p {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.container button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.container button:hover {
+    background-color: #0056b3;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.about-section,
+.faq-section {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 90%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.about-section h2,
+.faq-section h2 {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    color: #0d47a1;
+    font-weight: bold;
+}
+
+.about-section p,
+.faq-section p {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+.faq-section h3 {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: #0d47a1;
+    font-weight: bold;
+}
+
+.faq-section ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.footer {
+    background-color:#007bff; 
+    color: white;
+    font-family: Arial, sans-serif;
+    width: 100%;
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #26416a;
+  }
+  
+  .footer-contact,
+  .footer-links,
+  .footer-social {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .footer-contact .contact-item {
+    font-size: 14px;
+  }
+  
+  .footer-links a,
+  .footer-legal a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover{
+    color: #000000; 
+  }
+
+  .footer-legal a:hover{
+    color: #77a0e2; 
+  } 
+  
+  .footer-social i {
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .footer-social i:hover {
+    color: #77a0e2;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1b368f; 
+  }
+  
+  .footer-legal {
+    display: flex;
+    gap: 20px;
+  }
+  
+  html {
+    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+  }
+  
+  .footer-back-to-top a {
+    position: fixed; /* Fixes the position on the viewport */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color:#007bff; /* Background color matching the footer */
+    color: white; /* Text color */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px; /* Padding around the button */
+    border-radius: 50px; /* Rounded button */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for a better look */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+    z-index: 1000; /* Keeps it above other elements */
+  }
+  
+  .footer-back-to-top a:hover {
+    background-color: #3e6aac; /* Hover background color */
+    color: #77a0e2; /* Hover text color */
+  }
+  
