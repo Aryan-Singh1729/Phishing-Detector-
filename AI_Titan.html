@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Link Checker</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="AI_Titan.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="menu">
+            <a href="#">Tools</a>
+            <a href="#">Resources</a>
+            <a href="#">About</a>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="logo"> <img class="img" src="image.png" alt="Logo"></div>
+        <div class="menu">
+            <a href="#tools">Tools</a>
+            <a href="#resources">Resources</a>
+            <a href="#about">About</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Phishing Link (URL) & Email Checker</h1>
+        <p>Detect phishing or fraudulent links via an AI-powered real-time phishing link checker.</p>
+        <input type="text" placeholder="Paste URLs or email original content here">
+        <div class="recaptcha-container">
+            <div id="recaptcha-container"></div>
+        </div>
+        <button onclick="onSubmit()">Check</button>
+        <div class="footer">
+        </div>
+    </div>
+
+    <div class="about-section">
+        <h2>About Phishing URL Checker Tool</h2>
+        <p>The phishing link and URL checker tool helps you detect malicious links in emails, text messages, and other
+            online content. By scanning any links for suspicious patterns, our AI algorithm can determine if it’s a
+            phishing scam or a legitimate source.</p>
+        <p>EasyDMARC’s Phishing Link Checker ensures you don’t accidentally click on malicious links that could
+            potentially lead to identity theft or financial loss.</p>
+        <p>Our phishing site checker analyzes the link and compares it to a database of known phishing websites. If the
+            link is identified as suspicious, the tool will alert you and provide information on the original URL,
+            redirected URL, and URL status.</p>
+        <p>EasyDMARC’s Scam Website Checker can help you avoid falling victim to phishing scams and keep your personal
+            information secure.</p>
+    </div>
+
+    <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <h3>How Does Phishing Link Checker Work?</h3>
+        <p>Wouldn’t it be magical to paste the text in a box and quickly learn whether the included links contain
+            anything suspicious?</p>
+        <p>EasyDMARC’s Phishing Link Scanner detects phishing and malicious websites using a high-quality
+            machine-learning algorithm. The tool parses high-quality datasets containing millions of real-time updated
+            phishing URLs and feeds them into the model. AI reads patterns and learns to differentiate between good and
+            malicious ones with more than 90% accuracy.</p>
+        <h3>Here's how the tool works:</h3>
+        <ul>
+            <li>Extracts all URLs from the pasted text</li>
+            <li>Scans these URLs to detect any issues</li>
+            <li>Tells you whether they are "Good" or "Suspicious."</li>
+        </ul>
+        <p>EasyDMARC's phishing link checker is a proprietary machine-learning model that simplifies email security.</p>
+        <h3>How To Identify URL Phishing?</h3>
+        <p>While using our tool is a safe way to eliminate the risk of suspicious URLs, you can identify <a
+                href="#">phishing attempts</a> or malicious links with the naked eye.</p>
+        <p>Ask yourself the following questions before clicking on any URL:</p>
+        <ul>
+            <li>Is the Message Legitimate? When you receive a link directing you to another website, it can be
+                potentially harmful unless proven otherwise.</li>
+            <li>Does it urge you to take action? This is a sign that you or your feelings are being exploited.</li>
+            <li>Who’s sending you the message, and what do they want? If the request seems in any way weird, always seek
+                verbal confirmation.</li>
+        </ul>
+        <h3>Additional Tips:</h3>
+        <ul>
+            <li>Is the message grammatically correct? Check for any blunders in spelling or grammar. Hackers often
+                misspell words to avoid spam filters.</li>
+            <li>Does the email ask you for personal information? If yes, it could be a scam.</li>
+            <li>Analyze the URL closely before engaging with it. Hover your cursor over the link to check its actual
+                source.</li>
+            <li>Beware of homographs in domain names, such as "rn" looking like "m" or numbers like "0" resembling "O."
+            </li>
+            <li>Ensure the URL uses HTTPS to confirm it’s secure.</li>
+        </ul>
+        <h3>How To Protect Against URL Phishing?</h3>
+        <p>A link is not always what it looks like. Cybercriminals go to great lengths to create malicious websites resembling real ones. Stay alert!</p>
+
+        <h3>Security Awareness</h3>
+        <p>Security awareness training is vital even if you rely on technology to guard your organization. Teach your employees how to check phishing URLs, avoid scams, detect malicious attachments, and deal with various attack types.</p>
+
+        <h3>URL Filtering</h3>
+        <p>Be cautious of emails and messages that ask you to click on a link or provide personal information. Always check the URL of the website you are visiting. Phishing websites often have URLs similar to legitimate websites but with slight variations. For example, instead of "paypal.com," the URL might be "paypa1.com."</p>
+
+        <h3>DMARC Compliance</h3>
+        <p>Implement DMARC and achieve peace of mind. With DMARC in place, no one can send emails from your domains. You’ll also gain full visibility into how your emails are used worldwide.</p>
+
+        <h3>How to Check Link Safety With EasyDMARC?</h3>
+        <p>You can use EasyDMARC's phishing link tester by copying and pasting the URL into the search bar and clicking "Enter." You’ll receive information about each link separately in a few seconds. You can also paste text containing links into the box. The tool checks for phishing URLs, simultaneously detecting and analyzing up to 20 links.</p>
+
+        <h3>What Does a "Good URL" Mean?</h3>
+        <p>"Good" is one of the outcomes of our phishing link checker. It usually means the link doesn’t contain any malicious elements. Basically, it’s a legit brand link and can’t lead to a phishing site. (If unsure, use our Legit Website Checker on this page to validate the URL).</p>
+
+        <h3>What Does a "Suspicious URL" Mean?</h3>
+        <p>"Suspicious" is the second outcome our safe link checker tool can produce. It means the URL in question leads to a malicious website, and it’s better to avoid clicking it.</p>
+    
+    </div>
+    <footer class="footer">
+        <div class="footer-top">
+          <div class="footer-contact">
+            <div class="contact-item">
+              <i class="icon-phone"></i> IN +91 8869090411
+            </div>
+            <div class="contact-item">
+              <i class="icon-phone"></i> IN +91 7991723724
+            </div>
+            <div class="contact-item">
+              <i class="icon-phone"></i> IN +91 9950247507 
+            </div>
+          </div>
+          <div class="footer-links">
+            <a href="#">Contact us</a>
+            <a href="#">Get Support</a>
+          </div>
+          <div class="footer-social">
+            <i class="icon-facebook"></i>
+            <i class="icon-linkedin"></i>
+            <i class="icon-x"></i>
+            <i class="icon-telegram"></i>
+            <i class="icon-youtube"></i>
+            <i class="icon-reddit"></i>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <a href="#">Legal and Compliance</a>
+            <a href="#">Security Policy</a>
+          </div>
+          <div class="footer-copyright">
+            © AI TITAN 2025 | All Rights Reserved
+          </div>
+          <div class="footer-back-to-top">
+            <a href="#">↑ Back to Top</a>
+          </div>
+        </div>
+    </footer>
+</body>
+
+</html>
